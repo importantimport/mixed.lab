@@ -30,9 +30,6 @@ importers:
       '@types/react-dom':
         specifier: '18'
         version: 18.3.0
-      core-js:
-        specifier: ^3.36.1
-        version: 3.37.1
       react-refresh:
         specifier: ^0.14.0
         version: 0.14.2
