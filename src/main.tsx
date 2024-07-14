@@ -1,28 +1,15 @@
-import { useState } from 'react'
+import { Canvas } from '@react-three/fiber'
 
-export function Main() {
-  const [count, setCount] = useState(0)
+import { Box } from './components/box'
 
-  return (
-    <>
-      <h1>Farm + React</h1>
-      <div className="card">
-        <button onClick={() => setCount(count => count + 1)}>
-          count is
-          {' '}
-          {count}
-        </button>
-        <p>
-          Edit
-          {' '}
-          <code>src/main.tsx</code>
-          {' '}
-          and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Farm and React logos to learn more
-      </p>
-    </>
-  )
-}
+/** Example from {@link https://docs.pmnd.rs/react-three-fiber/getting-started/introduction} */
+// eslint-disable-next-line antfu/top-level-function
+export const Main = () => (
+  <Canvas>
+    <ambientLight intensity={Math.PI / 2} />
+    <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} decay={0} intensity={Math.PI} />
+    <pointLight position={[-10, -10, -10]} decay={0} intensity={Math.PI} />
+    <Box position={[-1.2, 0, 0]} />
+    <Box position={[1.2, 0, 0]} />
+  </Canvas>
+)
