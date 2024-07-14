@@ -24,6 +24,9 @@ importers:
       '@farmfe/plugin-react':
         specifier: ^1.1.0
         version: 1.1.0
+      '@importantimport/tsconfig':
+        specifier: ^0.0.1
+        version: 0.0.1
       '@types/react':
         specifier: '18'
         version: 18.3.3
@@ -167,6 +170,9 @@ packages:
 
   '@farmfe/utils@0.1.0':
     resolution: {integrity: sha512-neNJQGqV7XL4XifG1uHOBFSFLy2yx1/DVZNRA7nfeEAXEksVZTwWA+fZrYEaI0w7Sw6K/9NYn9Jgpn+NAT0mcg==}
+
+  '@importantimport/tsconfig@0.0.1':
+    resolution: {integrity: sha512-ZALhTBXxztkzytEzQpaARIAYhyEdfJgqBcnwyK1wuT5PbyCGSEXWUJEOt6u7GxFznew2pRVMcqO1xLI+3NsFFg==}
 
   '@inquirer/figures@1.0.3':
     resolution: {integrity: sha512-ErXXzENMH5pJt5/ssXV0DfWUZqly8nGzf0UcBV9xTnP+KyffE2mqyxIMBrZ8ijQck2nU0TQm40EQB53YreyWHw==}
@@ -1149,6 +1155,8 @@ snapshots:
       core-js: 3.37.1
 
   '@farmfe/utils@0.1.0': {}
+
+  '@importantimport/tsconfig@0.0.1': {}
 
   '@inquirer/figures@1.0.3': {}
 
