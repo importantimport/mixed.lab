@@ -3,7 +3,6 @@ import { useRef, useState } from 'react'
 import { ThreeElements, useFrame } from '@react-three/fiber'
 
 /** Example from {@link https://docs.pmnd.rs/react-three-fiber/getting-started/introduction} */
-// eslint-disable-next-line antfu/top-level-function
 export const Box = (props: ThreeElements['mesh']) => {
   const meshRef = useRef<Mesh>(null!)
   const [hovered, setHover] = useState(false)

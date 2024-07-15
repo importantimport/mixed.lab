@@ -9,6 +9,7 @@
     "build": "farm build",
     "preview": "farm preview",
     "clean": "farm clean",
+    "component": "uikit component",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
