@@ -1,9 +1,6 @@
 import { Container, Text } from '@react-three/uikit'
+import { Button, colors } from '@react-three/uikit-default'
 import { ComponentPropsWithoutRef } from 'react'
-
-import { Button } from './default/button'
-
-import { colors } from './default/theme'
 
 const MainNav = (props: Omit<ComponentPropsWithoutRef<typeof Container>, 'children'>) => (
   <Container alignItems="center" flexDirection="row" gap={16} lg={{ gap: 24 }} {...props}>

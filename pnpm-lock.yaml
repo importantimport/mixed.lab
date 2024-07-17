@@ -14,6 +14,12 @@ importers:
       '@react-three/uikit':
         specifier: ^0.3.13
         version: 0.3.13(@react-three/fiber@8.16.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.166.1))(@types/react@18.3.3)(react@18.3.1)(three@0.166.1)
+      '@react-three/uikit-default':
+        specifier: ^0.3.13
+        version: 0.3.13(@react-three/fiber@8.16.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.166.1))(@types/react@18.3.3)(react@18.3.1)(three@0.166.1)
+      '@react-three/uikit-lucide':
+        specifier: ^0.3.13
+        version: 0.3.13(@react-three/fiber@8.16.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.166.1))(@types/react@18.3.3)(react@18.3.1)(three@0.166.1)
       '@react-three/xr':
         specifier: ^6.0.0
         version: 6.0.0(@types/react@18.3.3)(react@18.3.1)(three@0.166.1)
@@ -480,6 +486,12 @@ packages:
         optional: true
       react-native:
         optional: true
+
+  '@react-three/uikit-default@0.3.13':
+    resolution: {integrity: sha512-/XLhaGgYFflZOSFx9NQkM4xWOgzMOOktkp75Q/5thz2vlGDL8CB5S3Mz2upOT/YaxwiyQYcGZklvvvOQTaReQg==}
+
+  '@react-three/uikit-lucide@0.3.13':
+    resolution: {integrity: sha512-VFdwvR7YTPlia4o8rsiIbrB6k2d31Bkm/gcEqS/1+J6kkXaLOwGCE0jmmPu3/4um7bsUK83Ni1/KiafhsmBnOQ==}
 
   '@react-three/uikit@0.3.13':
     resolution: {integrity: sha512-tS6JFpKygxJSCr0z3K7KEv+VFkBQckDgcOpQzcqaCHgDNf/jGr1uudieqCCct31hChO6bosIq42SRhIvR//DnA==}
@@ -2640,6 +2652,9 @@ packages:
     resolution: {integrity: sha512-LxhtAkPDTkVCMQjt2h6eBVY28KCjikZqZfMcC15YBeNjkgUpdCfBu5HoiOTDu86v6smE8yOjyEktJ8hlbANHQA==}
     engines: {node: '>=0.6.x'}
 
+  tunnel-rat@0.1.2:
+    resolution: {integrity: sha512-lR5VHmkPhzdhrM092lI2nACsLO4QubF0/yoOhzX7c+wIpbN1GjHNzCc91QlpxBi+cnx8vVJ+Ur6vL5cEoQPFpQ==}
+
   tw-to-css@0.0.12:
     resolution: {integrity: sha512-rQAsQvOtV1lBkyCw+iypMygNHrShYAItES5r8fMsrhhaj5qrV2LkZyXc8ccEH+u5bFjHjQ9iuxe90I7Kykf6pw==}
     engines: {node: '>=16.0.0'}
@@ -3353,6 +3368,30 @@ snapshots:
       zustand: 3.7.2(react@18.3.1)
     optionalDependencies:
       react-dom: 18.3.1(react@18.3.1)
+
+  '@react-three/uikit-default@0.3.13(@react-three/fiber@8.16.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.166.1))(@types/react@18.3.3)(react@18.3.1)(three@0.166.1)':
+    dependencies:
+      '@react-three/uikit': 0.3.13(@react-three/fiber@8.16.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.166.1))(@types/react@18.3.3)(react@18.3.1)(three@0.166.1)
+      '@react-three/uikit-lucide': 0.3.13(@react-three/fiber@8.16.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.166.1))(@types/react@18.3.3)(react@18.3.1)(three@0.166.1)
+      tunnel-rat: 0.1.2(@types/react@18.3.3)(react@18.3.1)
+    transitivePeerDependencies:
+      - '@react-three/fiber'
+      - '@types/react'
+      - immer
+      - react
+      - three
+      - ts-node
+
+  '@react-three/uikit-lucide@0.3.13(@react-three/fiber@8.16.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.166.1))(@types/react@18.3.3)(react@18.3.1)(three@0.166.1)':
+    dependencies:
+      '@react-three/uikit': 0.3.13(@react-three/fiber@8.16.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.166.1))(@types/react@18.3.3)(react@18.3.1)(three@0.166.1)
+    transitivePeerDependencies:
+      - '@react-three/fiber'
+      - '@types/react'
+      - immer
+      - react
+      - three
+      - ts-node
 
   '@react-three/uikit@0.3.13(@react-three/fiber@8.16.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.166.1))(@types/react@18.3.3)(react@18.3.1)(three@0.166.1)':
     dependencies:
@@ -5687,6 +5726,14 @@ snapshots:
   tslib@2.6.3: {}
 
   tsscmp@1.0.6: {}
+
+  tunnel-rat@0.1.2(@types/react@18.3.3)(react@18.3.1):
+    dependencies:
+      zustand: 4.5.4(@types/react@18.3.3)(react@18.3.1)
+    transitivePeerDependencies:
+      - '@types/react'
+      - immer
+      - react
 
   tw-to-css@0.0.12:
     dependencies:
