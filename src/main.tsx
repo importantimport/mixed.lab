@@ -10,14 +10,18 @@ import { Index } from './pages'
 const store = createXRStore()
 
 export const Main = () => (
-  <Canvas gl={{ localClippingEnabled: true }}>
-    <XR store={store}>
-      <Switch>
-        <Route path="/demo/fiber" component={FiberDemo} />
-        <Route path="/demo/uikit" component={UikitDemo} />
-        <Route path="/demo/xr" component={XRDemo} />
-        <Route path="/" component={Index} />
-      </Switch>
-    </XR>
-  </Canvas>
+  <>
+    <button type="button" onClick={() => store.enterVR()}>Enter VR</button>
+    <button type="button" onClick={() => store.enterAR()}>Enter AR</button>
+    <Canvas gl={{ localClippingEnabled: true }}>
+      <XR store={store}>
+        <Switch>
+          <Route path="/demo/fiber" component={FiberDemo} />
+          <Route path="/demo/uikit" component={UikitDemo} />
+          <Route path="/demo/xr" component={XRDemo} />
+          <Route path="/" component={Index} />
+        </Switch>
+      </XR>
+    </Canvas>
+  </>
 )
