@@ -14,6 +14,9 @@ importers:
       '@react-three/uikit':
         specifier: ^0.3.13
         version: 0.3.13(@react-three/fiber@8.16.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.166.1))(@types/react@18.3.3)(react@18.3.1)(three@0.166.1)
+      '@react-three/xr':
+        specifier: ^6.0.0
+        version: 6.0.0(@types/react@18.3.3)(react@18.3.1)(three@0.166.1)
       '@types/three':
         specifier: ^0.166.0
         version: 0.166.0
@@ -439,10 +442,16 @@ packages:
     resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
+  '@pmndrs/pointer-events@6.0.0':
+    resolution: {integrity: sha512-qR8ZXzp9F59r3Dqud2fvdq1y6EM66ZYiKW1YmKbyMETb4kk0/EECubQ/W0j7FSFbFU+AIEHTEcW2rxU/E7pU8w==}
+
   '@pmndrs/uikit@0.3.13':
     resolution: {integrity: sha512-DxKE1kHBnp6C7Bp57KwfPcM4BSwlE+7sbyntwzIyIBHPqH2786nEeZNn5hkYMIw9Gjw1ioEXRLoyIZ16UwYGfQ==}
     peerDependencies:
       three: '>=0.160'
+
+  '@pmndrs/xr@6.0.0':
+    resolution: {integrity: sha512-IL5V0GFsckGW58BH5i4o741OHAjb+UdQVzh5OjxR2b0xEuokdCbVzCkcYGW3arVA9s6ffAlvtC2KCHPsh4VNhQ==}
 
   '@preact/signals-core@1.7.0':
     resolution: {integrity: sha512-bEZLgmJGSBVP5PUPDowhPW3bVdMmp9Tr5OEl+SQK+8Tv9T7UsIfyN905cfkmmeqw8z4xp8T6zrl4M1uj9+HAfg==}
@@ -478,6 +487,9 @@ packages:
     peerDependencies:
       '@react-three/fiber': '>=8'
       react: '>=18'
+
+  '@react-three/xr@6.0.0':
+    resolution: {integrity: sha512-HxC5Oy6YEUZIW99HV8SHNMez6mv47y2gBTqvwMBsJZYuMJguQ20x+1zN7lcjnVvBSbbEmr4xj8pEL7xYD/bWng==}
 
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
@@ -1941,6 +1953,11 @@ packages:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
 
+  meshline@3.3.1:
+    resolution: {integrity: sha512-/TQj+JdZkeSUOl5Mk2J7eLcYTLiQm2IDzmlSvYm7ov15anEcDJ92GHqqazxTSreeNgfnYu24kiEvvv0WlbCdFQ==}
+    peerDependencies:
+      three: '>=0.137'
+
   meshoptimizer@0.18.1:
     resolution: {integrity: sha512-ZhoIoL7TNV4s5B6+rx5mC//fw8/POGyNxS/DZyCJeiZ12ScLfVwRE/GfsxwiTkMYYD5DmK2/JXnEVXqL4rF+Sw==}
 
@@ -3293,6 +3310,8 @@ snapshots:
 
   '@pkgr/core@0.1.1': {}
 
+  '@pmndrs/pointer-events@6.0.0': {}
+
   '@pmndrs/uikit@0.3.13(three@0.166.1)':
     dependencies:
       '@preact/signals-core': 1.7.0
@@ -3303,6 +3322,17 @@ snapshots:
       yoga-layout: 3.1.0
     transitivePeerDependencies:
       - ts-node
+
+  '@pmndrs/xr@6.0.0(@types/react@18.3.3)(react@18.3.1)(three@0.166.1)':
+    dependencies:
+      '@pmndrs/pointer-events': 6.0.0
+      meshline: 3.3.1(three@0.166.1)
+      zustand: 4.5.4(@types/react@18.3.3)(react@18.3.1)
+    transitivePeerDependencies:
+      - '@types/react'
+      - immer
+      - react
+      - three
 
   '@preact/signals-core@1.7.0': {}
 
@@ -3342,6 +3372,18 @@ snapshots:
       - immer
       - three
       - ts-node
+
+  '@react-three/xr@6.0.0(@types/react@18.3.3)(react@18.3.1)(three@0.166.1)':
+    dependencies:
+      '@pmndrs/pointer-events': 6.0.0
+      '@pmndrs/xr': 6.0.0(@types/react@18.3.3)(react@18.3.1)(three@0.166.1)
+      suspend-react: 0.1.3(react@18.3.1)
+      zustand: 4.5.4(@types/react@18.3.3)(react@18.3.1)
+    transitivePeerDependencies:
+      - '@types/react'
+      - immer
+      - react
+      - three
 
   '@rtsao/scc@1.1.0': {}
 
@@ -4985,6 +5027,10 @@ snapshots:
   merge-stream@2.0.0: {}
 
   merge2@1.4.1: {}
+
+  meshline@3.3.1(three@0.166.1):
+    dependencies:
+      three: 0.166.1
 
   meshoptimizer@0.18.1: {}
 
