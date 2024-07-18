@@ -4,6 +4,7 @@ import { setPreferredColorScheme } from '@react-three/uikit'
 import { XR, createXRStore } from '@react-three/xr'
 import { Route, Switch } from 'wouter'
 
+import { MMDChamber } from './pages/chamber/mmd'
 import { FiberDemo } from './pages/demo/fiber'
 import { UikitDemo } from './pages/demo/uikit'
 import { XRDemo } from './pages/demo/xr'
@@ -33,6 +34,7 @@ export const Main = () => (
       <XR store={store}>
         <Environment preset="city" />
         <Switch>
+          <Route path="/chamber/mmd" component={MMDChamber} />
           <Route path="/demo/fiber" component={FiberDemo} />
           <Route path="/demo/uikit" component={UikitDemo} />
           <Route path="/demo/xr" component={XRDemo} />
