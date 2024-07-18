@@ -1,6 +1,7 @@
+import { Environment } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
-import { Route, Switch } from 'wouter'
 import { XR, createXRStore } from '@react-three/xr'
+import { Route, Switch } from 'wouter'
 
 import { FiberDemo } from './pages/demo/fiber'
 import { UikitDemo } from './pages/demo/uikit'
@@ -19,6 +20,7 @@ export const Main = () => (
       style={{ height: '100dvh', touchAction: 'none' }}
     >
       <XR store={store}>
+        <Environment preset="city" />
         <Switch>
           <Route path="/demo/fiber" component={FiberDemo} />
           <Route path="/demo/uikit" component={UikitDemo} />
