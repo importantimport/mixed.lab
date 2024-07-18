@@ -9,17 +9,11 @@ import { UikitDemo } from './pages/demo/uikit'
 import { XRDemo } from './pages/demo/xr'
 import { XRUikitDemo } from './pages/demo/xr-uikit'
 import { Index } from './pages'
+import { options } from './utils/xr'
 
 setPreferredColorScheme('system')
 
-const store = createXRStore({
-  hand: {
-    teleportPointer: true,
-    rayPointer: { cursorModel: { color: 'black' } },
-    touchPointer: { cursorModel: { color: 'black' } },
-  },
-  controller: { teleportPointer: true },
-})
+const store = createXRStore(options)
 
 export const Main = () => (
   <>
