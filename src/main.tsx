@@ -28,7 +28,7 @@ export const Main = () => (
     <Canvas
       // frameloop="demand"
       gl={{ localClippingEnabled: true }}
-      style={{ height: '100dvh', touchAction: 'none' }}
+      style={{ height: '100dvh', width: '100%', flexGrow: 1, touchAction: 'none' }}
     >
       <XR store={store}>
         <Environment preset="city" />

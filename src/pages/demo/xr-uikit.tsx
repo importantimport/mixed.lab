@@ -15,7 +15,8 @@ import {
 /** Example from {@link https://github.com/pmndrs/xr/blob/main/examples/uikit/app.tsx} */
 export const XRUikitDemo = () => (
   <group pointerEventsType={{ deny: 'grab' }} pointerEvents="auto" position={[0, 1.5, -0.5]}>
-    <Root pixelSize={0.001}>
+    {/* <Root pixelSize={0.001}> */}
+    <Root pixelSize={0.01}>
       <Container width="100%" display="flex" alignItems="center" justifyContent="center">
         <Container
           dark={{ backgroundColor: 'rgb(31,41,55)' }}
