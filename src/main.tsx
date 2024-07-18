@@ -1,4 +1,3 @@
-import { Environment } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { setPreferredColorScheme } from '@react-three/uikit'
 import { XR, createXRStore } from '@react-three/xr'
@@ -29,10 +28,9 @@ export const Main = () => (
     <Canvas
       // frameloop="demand"
       gl={{ localClippingEnabled: true }}
-      style={{ height: '100dvh', width: '100%', flexGrow: 1, touchAction: 'none' }}
+      style={{ height: '100dvh', width: '100dvw', flexGrow: 1, touchAction: 'none' }}
     >
       <XR store={store}>
-        <Environment preset="city" />
         <Switch>
           <Route path="/chamber/mmd" component={MMDChamber} />
           <Route path="/demo/fiber" component={FiberDemo} />
