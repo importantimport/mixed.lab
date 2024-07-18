@@ -13,7 +13,11 @@ export const Main = () => (
   <>
     <button type="button" onClick={() => store.enterVR()}>Enter VR</button>
     <button type="button" onClick={() => store.enterAR()}>Enter AR</button>
-    <Canvas gl={{ localClippingEnabled: true }}>
+    <Canvas
+      // frameloop="demand"
+      gl={{ localClippingEnabled: true }}
+      style={{ height: '100dvh', touchAction: 'none' }}
+    >
       <XR store={store}>
         <Switch>
           <Route path="/demo/fiber" component={FiberDemo} />
