@@ -1,14 +1,25 @@
 import { Environment } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
+import { setPreferredColorScheme } from '@react-three/uikit'
 import { XR, createXRStore } from '@react-three/xr'
 import { Route, Switch } from 'wouter'
 
 import { FiberDemo } from './pages/demo/fiber'
 import { UikitDemo } from './pages/demo/uikit'
 import { XRDemo } from './pages/demo/xr'
+import { XRUikitDemo } from './pages/demo/xr-uikit'
 import { Index } from './pages'
 
-const store = createXRStore()
+setPreferredColorScheme('system')
+
+const store = createXRStore({
+  hand: {
+    teleportPointer: true,
+    rayPointer: { cursorModel: { color: 'black' } },
+    touchPointer: { cursorModel: { color: 'black' } },
+  },
+  controller: { teleportPointer: true },
+})
 
 export const Main = () => (
   <>
@@ -25,6 +36,7 @@ export const Main = () => (
           <Route path="/demo/fiber" component={FiberDemo} />
           <Route path="/demo/uikit" component={UikitDemo} />
           <Route path="/demo/xr" component={XRDemo} />
+          <Route path="/demo/xr-uikit" component={XRUikitDemo} />
           <Route path="/" component={Index} />
         </Switch>
       </XR>
