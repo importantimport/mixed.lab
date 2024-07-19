@@ -5,6 +5,8 @@ import { useState } from 'react'
 import { Vector3 } from 'three'
 import { Route, Switch } from 'wouter'
 
+import { Contexts } from './components/contexts'
+
 import { MMDChamber } from './pages/chamber/mmd'
 import { FiberDemo } from './pages/demo/fiber'
 import { UikitDemo } from './pages/demo/uikit'
@@ -21,7 +23,7 @@ export const Main = () => {
   const [position, setPosition] = useState(new Vector3())
 
   return (
-    <>
+    <Contexts>
       <button type="button" onClick={() => store.enterVR()}>Enter VR</button>
       <button type="button" onClick={() => store.enterAR()}>Enter AR</button>
       <Canvas
@@ -43,6 +45,6 @@ export const Main = () => {
           </Switch>
         </XR>
       </Canvas>
-    </>
+    </Contexts>
   )
 }
