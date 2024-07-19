@@ -1,10 +1,9 @@
 // import { Link } from 'wouter'
-import { Fullscreen } from '@react-three/uikit'
-import { Header } from '../components/header'
+import { Fullscreen, Text } from '@react-three/uikit'
 
 export const Index = () => (
   <Fullscreen flexDirection="row" padding={10} gap={10}>
-    <Header />
+    <Text>Mixed.Lab</Text>
     {/* <h1>Mixed.Lab</h1>
     <ul>
       <li>
