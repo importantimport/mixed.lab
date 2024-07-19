@@ -38,16 +38,16 @@ export const Main = () => {
           <Fullscreen flexDirection="column">
             <Defaults>
               <Header />
-              <Switch>
-                <Route path="/chamber/mmd" component={MMDChamber} />
-                <Route path="/demo/fiber" component={FiberDemo} />
-                <Route path="/demo/uikit" component={UikitDemo} />
-                <Route path="/demo/xr" component={XRDemo} />
-                <Route path="/demo/xr-uikit" component={XRUikitDemo} />
-                <Route path="/" component={Index} />
-              </Switch>
             </Defaults>
           </Fullscreen>
+          <Switch>
+            <Route path="/chamber/mmd" component={MMDChamber} />
+            <Route path="/demo/fiber" component={FiberDemo} />
+            <Route path="/demo/uikit" component={UikitDemo} />
+            <Route path="/demo/xr" component={XRDemo} />
+            <Route path="/demo/xr-uikit" component={XRUikitDemo} />
+            <Route path="/" component={Index} />
+          </Switch>
         </XR>
       </Canvas>
     </Contexts>
