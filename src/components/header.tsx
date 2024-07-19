@@ -1,6 +1,6 @@
 import { Container, Text, getPreferredColorScheme, setPreferredColorScheme } from '@react-three/uikit'
 import { useState } from 'react'
-import { Moon, Sun, SunMoon } from '@react-three/uikit-lucide'
+import { FlaskConical, Moon, Sun, SunMoon } from '@react-three/uikit-lucide'
 import { Button } from '@react-three/uikit-default'
 
 import { useXRStore } from '@react-three/xr'
@@ -13,6 +13,7 @@ export const Header = () => {
     <Menubar borderRadius={0} paddingX={8} lg={{ paddingX: 16 }}>
       <MenubarMenu>
         <MenubarTrigger>
+          <FlaskConical paddingX={4} width={24} />
           <Text>Mixed.Lab</Text>
         </MenubarTrigger>
       </MenubarMenu>
