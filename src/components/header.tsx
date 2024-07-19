@@ -1,14 +1,15 @@
-import { Container, Text, getPreferredColorScheme, setPreferredColorScheme } from '@react-three/uikit'
-import { useState } from 'react'
-import { FlaskConical, Moon, Sun, SunMoon } from '@react-three/uikit-lucide'
+import { Container, Text } from '@react-three/uikit'
 import { Button } from '@react-three/uikit-default'
-
+import { FlaskConical, Moon, Sun, SunMoon } from '@react-three/uikit-lucide'
 import { useXRStore } from '@react-three/xr'
+
+import { useColorScheme } from '../hooks/use-color-scheme'
 import { Menubar, MenubarMenu, MenubarTrigger } from './default/menubar'
 
 export const Header = () => {
   const store = useXRStore()
-  const [pcs, updatePCS] = useState(() => getPreferredColorScheme())
+  const { colorScheme, setColorScheme } = useColorScheme()
+
   return (
     <Menubar borderRadius={0} paddingX={8} lg={{ paddingX: 16 }}>
       <MenubarMenu>
@@ -39,12 +40,9 @@ export const Header = () => {
       </MenubarMenu>
       <MenubarMenu>
         <MenubarTrigger
-          onClick={() => {
-            setPreferredColorScheme(pcs === 'light' ? 'dark' : pcs === 'dark' ? 'system' : 'light')
-            updatePCS(getPreferredColorScheme())
-          }}
+          onClick={() => setColorScheme(colorScheme === 'light' ? 'dark' : colorScheme === 'dark' ? 'system' : 'light')}
         >
-          {pcs === 'dark' ? <Moon /> : pcs === 'system' ? <SunMoon /> : <Sun />}
+          {colorScheme === 'dark' ? <Moon /> : colorScheme === 'system' ? <SunMoon /> : <Sun />}
         </MenubarTrigger>
       </MenubarMenu>
     </Menubar>

@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber'
-import { Fullscreen, setPreferredColorScheme } from '@react-three/uikit'
+import { Fullscreen } from '@react-three/uikit'
 import { Defaults } from '@react-three/uikit-default'
 import { TeleportTarget, XR, XROrigin, createXRStore } from '@react-three/xr'
 import { useState } from 'react'
@@ -16,8 +16,6 @@ import { XRDemo } from './pages/demo/xr'
 import { XRUikitDemo } from './pages/demo/xr-uikit'
 import { Index } from './pages'
 import { options } from './utils/xr'
-
-setPreferredColorScheme('system')
 
 const store = createXRStore(options)
 
