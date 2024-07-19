@@ -1,4 +1,4 @@
-import { XRStoreOptions } from '@react-three/xr'
+import type { XRStoreOptions } from '@react-three/xr'
 
 export const options = {
   hand: {
@@ -7,4 +7,4 @@ export const options = {
     touchPointer: { cursorModel: { color: 'black' } },
   },
   controller: { teleportPointer: true },
-} satisfies XRStoreOptions
+} as const satisfies XRStoreOptions

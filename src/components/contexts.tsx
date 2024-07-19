@@ -6,14 +6,15 @@ interface Props {
   children?: ReactNode
 }
 
+/* eslint-disable react/no-missing-key */
 const contexts = [
-  // eslint-disable-next-line react/no-missing-key
   <FontFamilyProvider
     inter={{
       medium: '/assets/fonts/inter-medium.json',
     }}
   />,
 ]
+/* eslint-enable react/no-missing-key */
 
 export const Contexts = ({ children }: Props) => (
   <ComposeContextProvider contexts={contexts}>
