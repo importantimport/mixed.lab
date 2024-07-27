@@ -33,6 +33,9 @@ export const Index = () => {
           <Button variant="ghost" justifyContent="flex-start" onClick={() => window.location.pathname = '/demo/uikit'}>
             <Text>Uikit</Text>
           </Button>
+          <Button variant="ghost" justifyContent="flex-start" onClick={() => window.location.pathname = '/demo/xr'}>
+            <Text>XR</Text>
+          </Button>
         </Container>
       </Container>
     </tunnel.In>
