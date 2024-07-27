@@ -14,7 +14,7 @@ export const Header = () => {
     <IfInSessionMode deny={['immersive-ar', 'immersive-vr']}>
       <Menubar borderRadius={0} paddingX={8} lg={{ paddingX: 16 }}>
         <MenubarMenu>
-          <MenubarTrigger>
+          <MenubarTrigger onClick={() => window.location.pathname = '/'}>
             <FlaskConical paddingX={4} width={24} />
             <Text>Mixed.Lab</Text>
           </MenubarTrigger>
