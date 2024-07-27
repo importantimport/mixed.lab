@@ -14,7 +14,6 @@ import { MMDChamber } from './pages/chamber/mmd'
 import { FiberDemo } from './pages/demo/fiber'
 import { UikitDemo } from './pages/demo/uikit'
 import { XRDemo } from './pages/demo/xr'
-import { XRUikitDemo } from './pages/demo/xr-uikit'
 import { Index } from './pages'
 import { options } from './utils/xr'
 
@@ -46,7 +45,6 @@ export const Main = () => {
             <Route path="/demo/fiber" component={FiberDemo} />
             <Route path="/demo/uikit" component={UikitDemo} />
             <Route path="/demo/xr" component={XRDemo} />
-            <Route path="/demo/xr-uikit" component={XRUikitDemo} />
             <Route path="/" component={Index} />
           </Switch>
         </XR>
