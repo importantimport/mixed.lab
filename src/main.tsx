@@ -1,6 +1,4 @@
 import { Canvas } from '@react-three/fiber'
-import { Fullscreen } from '@react-three/uikit'
-import { Defaults } from '@react-three/uikit-default'
 import { TeleportTarget, XR, XROrigin, createXRStore } from '@react-three/xr'
 import { useState } from 'react'
 import { Vector3 } from 'three'
@@ -33,11 +31,7 @@ export const Main = () => {
           {/** {@link https://docs.pmnd.rs/xr/tutorials/teleport} */}
           <XROrigin position={position} />
           <TeleportTarget onTeleport={setPosition} />
-          <Fullscreen flexDirection="column">
-            <Defaults>
-              <Header />
-            </Defaults>
-          </Fullscreen>
+          <Header />
           <Switch>
             <Route path="/chamber/mmd" component={MMDChamber} />
             <Route path="/demo/fiber" component={FiberDemo} />
