@@ -21,19 +21,19 @@ export const Index = () => {
         <H1>Mixed.Lab</H1>
         <H2>Chambers</H2>
         <Container flexDirection="column" gap={4}>
-          <Button onClick={() => window.location.pathname = '/chamber/mmd'} variant="secondary" justifyContent="flex-start">
+          <Button variant="secondary" justifyContent="flex-start" onClick={() => window.location.pathname = '/chamber/mmd'}>
             <Text>MMD</Text>
           </Button>
         </Container>
         <H2>Demos</H2>
         <Container flexDirection="column" gap={4}>
-          <Button onClick={() => window.location.pathname = '/demo/fiber'} variant="ghost" justifyContent="flex-start">
+          <Button variant="ghost" justifyContent="flex-start" onClick={() => window.location.pathname = '/demo/fiber'}>
             <Text>Fiber</Text>
           </Button>
-          <Button onClick={() => window.location.pathname = '/demo/uikit'} variant="ghost" justifyContent="flex-start">
+          <Button variant="ghost" justifyContent="flex-start" onClick={() => window.location.pathname = '/demo/uikit'}>
             <Text>Uikit</Text>
           </Button>
-          <Button onClick={() => window.location.pathname = '/demo/uikit-xr/'} variant="ghost" justifyContent="flex-start">
+          <Button variant="ghost" justifyContent="flex-start" onClick={() => window.location.pathname = '/demo/uikit-xr/'}>
             <Text>Uikit XR</Text>
           </Button>
         </Container>
