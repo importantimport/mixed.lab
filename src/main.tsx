@@ -1,10 +1,13 @@
 import { Canvas } from '@react-three/fiber'
+import { Fullscreen } from '@react-three/uikit'
+import { Defaults } from '@react-three/uikit-default'
 import { TeleportTarget, XR, XROrigin, createXRStore } from '@react-three/xr'
 import { useState } from 'react'
 import { Vector3 } from 'three'
 import { Route, Switch } from 'wouter'
 
-import { Contexts } from './components/contexts'
+import { Contexts } from './contexts'
+import { useTunnel } from './contexts/tunnel'
 import { Header } from './components/header'
 
 import { MMDChamber } from './pages/chamber/mmd'
@@ -19,6 +22,7 @@ const store = createXRStore(options)
 
 export const Main = () => {
   const [position, setPosition] = useState(new Vector3())
+  const tunnel = useTunnel()
 
   return (
     <Contexts>
@@ -31,7 +35,12 @@ export const Main = () => {
           {/** {@link https://docs.pmnd.rs/xr/tutorials/teleport} */}
           <XROrigin position={position} />
           <TeleportTarget onTeleport={setPosition} />
-          <Header />
+          <Fullscreen flexDirection="column">
+            <Defaults>
+              <Header />
+              <tunnel.Out />
+            </Defaults>
+          </Fullscreen>
           <Switch>
             <Route path="/chamber/mmd" component={MMDChamber} />
             <Route path="/demo/fiber" component={FiberDemo} />
