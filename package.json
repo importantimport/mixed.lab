@@ -2,7 +2,7 @@
   "name": "@importantimport/mixed-lab",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@9.5.0",
+  "packageManager": "pnpm@9.6.0",
   "scripts": {
     "dev": "farm start",
     "start": "farm start",
@@ -14,25 +14,25 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@react-three/drei": "^9.108.4",
+    "@react-three/drei": "^9.109.2",
     "@react-three/fiber": "^8.16.8",
-    "@react-three/uikit": "^0.3.13",
-    "@react-three/uikit-default": "^0.3.13",
-    "@react-three/uikit-lucide": "^0.3.13",
+    "@react-three/uikit": "^0.4.0",
+    "@react-three/uikit-default": "^0.4.0",
+    "@react-three/uikit-lucide": "^0.4.0",
     "@react-three/xr": "^6.0.0",
-    "@types/three": "^0.166.0",
+    "@types/three": "^0.167.1",
     "foxact": "^0.2.36",
     "react": "18",
     "react-dom": "18",
-    "three": "^0.166.1",
+    "three": "^0.167.0",
     "wouter": "^3.3.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.22.2",
-    "@eslint-react/eslint-plugin": "^1.5.25",
-    "@farmfe/cli": "^1.0.2",
-    "@farmfe/core": "^1.2.4",
-    "@farmfe/plugin-react": "^1.1.0",
+    "@antfu/eslint-config": "^2.23.2",
+    "@eslint-react/eslint-plugin": "^1.6.0",
+    "@farmfe/cli": "^1.0.3",
+    "@farmfe/core": "^1.3.11",
+    "@farmfe/plugin-react": "^1.2.0",
     "@importantimport/tsconfig": "^0.0.1",
     "@types/react": "18",
     "@types/react-dom": "18",
@@ -40,8 +40,8 @@
     "eslint": "9.5.0",
     "eslint-plugin-format": "^0.1.2",
     "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-react-refresh": "^0.4.8",
-    "react-refresh": "^0.14.0",
-    "vite-plugin-pwa": "^0.20.0"
+    "eslint-plugin-react-refresh": "^0.4.9",
+    "react-refresh": "^0.14.2",
+    "vite-plugin-pwa": "^0.20.1"
   }
 }
