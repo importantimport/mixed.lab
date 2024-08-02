@@ -1,11 +1,4 @@
 {
-  "compilerOptions": {
-    "composite": true,
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "strict": true,
-    "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true
-  },
+  "extends": "@importantimport/tsconfig/node.json",
   "include": ["*.config.ts"]
 }

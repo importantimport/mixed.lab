@@ -1,18 +1,11 @@
 {
-  "extends": "@importantimport/tsconfig",
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "types": [
-      "vite-plugin-pwa/client",
-      "vite-plugin-pwa/pwa-assets"
-    ]
-  },
   "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
     {
       "path": "./tsconfig.node.json"
     }
   ],
-  "include": [
-    "src"
-  ]
+  "files": []
 }
