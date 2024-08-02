@@ -10,7 +10,7 @@ const examples = 'https://cdn.jsdelivr.net/gh/mrdoob/three.js/examples'
 const Miku = () => {
   const pmd = useLoader(MMDLoader, `${examples}/models/mmd/miku/miku_v2.pmd`)
 
-  return (<primitive object={pmd} />)
+  return (<primitive object={pmd} scale={0.1} />)
 }
 
 export const MMDChamber = () => {
