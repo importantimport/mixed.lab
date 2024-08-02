@@ -34,6 +34,7 @@
     "@farmfe/cli": "^1.0.3",
     "@farmfe/core": "^1.2.8",
     "@farmfe/plugin-react": "^1.1.0",
+    "@importantimport/eslint-config": "1.0.0-alpha.0",
     "@importantimport/tsconfig": "^0.1.1",
     "@types/react": "18",
     "@types/react-dom": "18",
