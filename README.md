@@ -1,35 +1,22 @@
 # Mixed.Lab
 
-## Setup
+## Deployment
 
-Install the dependencies:
+Mixed.Lab is deployed at [mixed-lab.pages.dev](https://mixed-lab.pages.dev).
 
-```bash
-pnpm install
-```
+`@iwer/devui` is enabled automatically for local,
+to enable it in the site you need to press <kbd>Win</kbd> + <kbd>Alt</kbd> + <kbd>E</kbd>.
 
-## Get Started
-
-Start the dev server:
+## Development
 
 ```bash
-pnpm start
+pnpm install # install dependencies
+pnpm dev # start dev server
+pnpm build # build for production
+pnpm preview # preview the production
+pnpm clean # clean cache
 ```
 
-Build the app for production:
+## License
 
-```bash
-pnpm build
-```
-
-Preview the Production build product:
-
-```bash
-pnpm preview
-```
-
-Clear persistent cache local files
-
-```bash
-pnpm clean
-```
+[MIT](LICENSE.md)
