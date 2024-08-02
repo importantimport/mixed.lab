@@ -12,7 +12,7 @@ export const Header = () => {
 
   return (
     <IfInSessionMode deny={['immersive-ar', 'immersive-vr']}>
-      <Menubar borderRadius={0} paddingX={8} lg={{ paddingX: 16 }}>
+      <Menubar borderRadius={0} lg={{ paddingX: 16 }} paddingX={8}>
         <MenubarMenu>
           <MenubarTrigger onClick={() => window.location.pathname = '/'}>
             <FlaskConical paddingX={4} width={24} />
@@ -32,9 +32,9 @@ export const Header = () => {
         <Container flexGrow={1} />
         <MenubarMenu>
           <Button
-            variant="ghost"
-            size="sm"
             onClick={() => window.open('https://github.com/importantimport/mixed.lab', '_blank')}
+            size="sm"
+            variant="ghost"
           >
             <Text>Source Code</Text>
           </Button>

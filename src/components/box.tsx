@@ -1,6 +1,8 @@
-import { Mesh } from 'three'
+import type { ThreeElements } from '@react-three/fiber'
+import type { Mesh } from 'three'
+
+import { useFrame } from '@react-three/fiber'
 import { useRef, useState } from 'react'
-import { ThreeElements, useFrame } from '@react-three/fiber'
 
 /** Example from {@link https://docs.pmnd.rs/react-three-fiber/getting-started/introduction} */
 export const Box = (props: ThreeElements['mesh']) => {
@@ -12,11 +14,11 @@ export const Box = (props: ThreeElements['mesh']) => {
   return (
     <mesh
       {...props}
+      onClick={() => setActive(!active)}
+      onPointerOut={() => setHover(false)}
+      onPointerOver={() => setHover(true)}
       ref={meshRef}
       scale={active ? 1.5 : 1}
-      onClick={() => setActive(!active)}
-      onPointerOver={() => setHover(true)}
-      onPointerOut={() => setHover(false)}
     >
       <boxGeometry args={[1, 1, 1]} />
       <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />

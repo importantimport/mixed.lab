@@ -1,20 +1,19 @@
 import { Canvas } from '@react-three/fiber'
 import { Fullscreen } from '@react-three/uikit'
 import { Defaults } from '@react-three/uikit-default'
-import { TeleportTarget, XR, XROrigin, createXRStore } from '@react-three/xr'
+import { createXRStore, TeleportTarget, XR, XROrigin } from '@react-three/xr'
 import { useState } from 'react'
 import { Vector3 } from 'three'
 import { Route, Switch } from 'wouter'
 
+import { Header } from './components/header'
 import { Contexts } from './contexts'
 import { useTunnel } from './contexts/tunnel'
-import { Header } from './components/header'
-
+import { Index } from './pages'
 import { MMDChamber } from './pages/chamber/mmd'
 import { FiberDemo } from './pages/demo/fiber'
 import { UikitDemo } from './pages/demo/uikit'
 import { XRDemo } from './pages/demo/xr'
-import { Index } from './pages'
 import { options } from './utils/xr'
 
 const store = createXRStore(options)
@@ -28,7 +27,7 @@ export const Main = () => {
       <Canvas
         // frameloop="demand"
         gl={{ localClippingEnabled: true }}
-        style={{ height: '100dvh', width: '100dvw', flexGrow: 1, touchAction: 'none' }}
+        style={{ flexGrow: 1, height: '100dvh', touchAction: 'none', width: '100dvw' }}
       >
         <XR store={store}>
           {/** {@link https://docs.pmnd.rs/xr/tutorials/teleport} */}
@@ -41,11 +40,11 @@ export const Main = () => {
             </Defaults>
           </Fullscreen>
           <Switch>
-            <Route path="/chamber/mmd" component={MMDChamber} />
-            <Route path="/demo/fiber" component={FiberDemo} />
-            <Route path="/demo/uikit" component={UikitDemo} />
-            <Route path="/demo/xr" component={XRDemo} />
-            <Route path="/" component={Index} />
+            <Route component={MMDChamber} path="/chamber/mmd" />
+            <Route component={FiberDemo} path="/demo/fiber" />
+            <Route component={UikitDemo} path="/demo/uikit" />
+            <Route component={XRDemo} path="/demo/xr" />
+            <Route component={Index} path="/" />
           </Switch>
         </XR>
       </Canvas>

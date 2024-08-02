@@ -1,10 +1,10 @@
 import type { XRStoreOptions } from '@react-three/xr'
 
 export const options = {
+  controller: { teleportPointer: true },
   hand: {
-    teleportPointer: true,
     rayPointer: { cursorModel: { color: 'black' } },
+    teleportPointer: true,
     touchPointer: { cursorModel: { color: 'black' } },
   },
-  controller: { teleportPointer: true },
 } as const satisfies XRStoreOptions

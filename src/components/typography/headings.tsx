@@ -10,9 +10,9 @@ export const H1 = ({ children }: Props) => (
   <Text
     fontSize={36}
     fontWeight={800}
-    lineHeight={40}
     letterSpacing={-0.4}
     lg={{ fontSize: 48, lineHeight: 48 }}
+    lineHeight={40}
   >
     {children}
   </Text>
@@ -25,8 +25,8 @@ export const H2 = ({ children }: Props) => (
     borderColor={colors.border}
     fontSize={30}
     fontWeight={600}
-    lineHeight={36}
     letterSpacing={-0.4}
+    lineHeight={36}
     paddingBottom={8}
   >
     {children}

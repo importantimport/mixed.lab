@@ -5,14 +5,14 @@ import {
 
 export default defineConfig({
   headLinkOptions: { preset: '2023' },
+  images: 'public/favicon.svg',
   preset: {
+    apple: { sizes: [] },
+    maskable: { sizes: [] },
     // ...minimal2023Preset,
     transparent: {
-      sizes: [],
       favicons: [[48, 'favicon.ico']],
+      sizes: [],
     },
-    maskable: { sizes: [] },
-    apple: { sizes: [] },
   },
-  images: 'public/favicon.svg',
 })

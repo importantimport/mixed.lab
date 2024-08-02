@@ -3,4 +3,4 @@ import tunnel from 'tunnel-rat'
 
 const [TunnelProvider, useTunnel, useSetTunnel] = createContextState(tunnel())
 
-export { TunnelProvider, useTunnel, useSetTunnel }
+export { TunnelProvider, useSetTunnel, useTunnel }

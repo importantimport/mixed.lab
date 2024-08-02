@@ -4,20 +4,20 @@ import pwaAssets from './pwa-assets.config'
 
 const config = {
   base: '/',
-  outDir: '/dist',
-  registerType: 'autoUpdate',
-  injectRegister: 'script-defer',
-  pwaAssets,
-  manifest: {
-    theme_color: '#000',
-  },
   injectManifest: {
-    target: false,
     envOptions: {
       envDir: '',
       envPrefix: 'FARM_',
     },
+    target: false,
   },
+  injectRegister: 'script-defer',
+  manifest: {
+    theme_color: '#000',
+  },
+  outDir: '/dist',
+  pwaAssets,
+  registerType: 'autoUpdate',
 } as const satisfies Partial<VitePWAOptions>
 
 export default config

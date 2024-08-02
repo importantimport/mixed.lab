@@ -4,14 +4,14 @@
   "private": true,
   "packageManager": "pnpm@9.6.0",
   "scripts": {
-    "dev": "farm start",
-    "start": "farm start",
     "build": "farm build",
-    "preview": "farm preview",
     "clean": "farm clean",
     "component": "uikit component",
+    "dev": "farm start",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "preview": "farm preview",
+    "start": "farm start"
   },
   "dependencies": {
     "@react-three/drei": "^9.109.2",
