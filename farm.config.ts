@@ -15,4 +15,8 @@ export default defineConfig({
     generouted(),
     // VitePWA(pwaConfig),
   ],
+  // TODO: use vite 6
+  // resolve: {
+  //   dedupe: ['@react-three/fiber', 'three'],
+  // },
 })
