@@ -1,7 +1,14 @@
+// import { Environment } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { Fullscreen } from '@react-three/uikit'
 import { Defaults } from '@react-three/uikit-default'
-import { createXRStore, TeleportTarget, XR, XROrigin } from '@react-three/xr'
+import {
+  createXRStore,
+  // IfInSessionMode,
+  TeleportTarget,
+  XR,
+  XROrigin,
+} from '@react-three/xr'
 import { Outlet } from '@tanstack/react-router'
 import { useState } from 'react'
 import { Vector3 } from 'three'
@@ -34,6 +41,15 @@ const Layout = () => {
               <tunnel.Out />
             </Defaults>
           </Fullscreen>
+          {/** doesn't work, @see {@link https://github.com/pmndrs/xr/issues/320} */}
+          {/* <IfInSessionMode deny="immersive-ar">
+            <Environment
+              background
+              files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/syferfontein_0d_clear_puresky_1k.hdr"
+            // ground
+            // resolution={256}
+            />
+          </IfInSessionMode> */}
           <Outlet />
         </XR>
       </Canvas>
