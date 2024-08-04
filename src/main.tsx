@@ -26,8 +26,8 @@ export const Main = () => {
   return (
     <Contexts>
       <Canvas
-        // frameloop="demand"
         gl={{ localClippingEnabled: true }}
+        shadows
         style={{ flexGrow: 1, height: '100dvh', touchAction: 'none', width: '100dvw' }}
       >
         <XR store={store}>
