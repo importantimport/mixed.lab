@@ -81,7 +81,7 @@ const Sidebar = (props: ComponentPropsWithoutRef<typeof Container>) => (
   </Container>
 )
 
-export const SettingsChamber = () => {
+const SettingsChamber = () => {
   const tunnel = useTunnel()
 
   return (
@@ -106,3 +106,5 @@ export const SettingsChamber = () => {
     </tunnel.In>
   )
 }
+
+export default SettingsChamber

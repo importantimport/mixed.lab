@@ -14,19 +14,20 @@
     "start": "farm start"
   },
   "dependencies": {
+    "@generouted/tanstack-react-router": "^1.19.6",
     "@react-three/drei": "^9.109.2",
     "@react-three/fiber": "^8.16.8",
     "@react-three/uikit": "^0.4.0",
     "@react-three/uikit-default": "^0.4.0",
     "@react-three/uikit-lucide": "^0.4.0",
     "@react-three/xr": "^6.1.0",
+    "@tanstack/react-router": "^1.46.4",
     "@types/three": "^0.167.1",
     "foxact": "^0.2.36",
     "react": "18",
     "react-dom": "18",
     "three": "^0.167.1",
-    "tunnel-rat": "^0.1.2",
-    "wouter": "^3.3.1"
+    "tunnel-rat": "^0.1.2"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.24.1",

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 /** Example from {@link https://docs.pmnd.rs/xr/getting-started/introduction} */
-export const XRDemo = () => {
+const XRDemo = () => {
   const [red, setRed] = useState(false)
 
   return (
@@ -11,3 +11,5 @@ export const XRDemo = () => {
     </mesh>
   )
 }
+
+export default XRDemo

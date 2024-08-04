@@ -13,10 +13,12 @@ const Miku = () => {
   return (<primitive object={pmd} scale={0.1} />)
 }
 
-export const MMDChamber = () => {
+const MMDChamber = () => {
   return (
     // <Suspense fallback={<Fallback />}>
     <Miku />
     // </Suspense>
   )
 }
+
+export default MMDChamber

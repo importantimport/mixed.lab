@@ -3,7 +3,7 @@ import { Container } from '@react-three/uikit'
 import { useTunnel } from '../../contexts/tunnel'
 
 /** Example from {@link https://docs.pmnd.rs/uikit/getting-started/introduction} */
-export const UikitDemo = () => {
+const UikitDemo = () => {
   const tunnel = useTunnel()
 
   return (
@@ -15,3 +15,5 @@ export const UikitDemo = () => {
     </tunnel.In>
   )
 }
+
+export default UikitDemo

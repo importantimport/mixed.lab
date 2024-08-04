@@ -1,7 +1,7 @@
 import { Box } from '../../components/box'
 
 /** Example from {@link https://docs.pmnd.rs/react-three-fiber/getting-started/introduction} */
-export const FiberDemo = () => (
+const FiberDemo = () => (
   <>
     <ambientLight intensity={Math.PI / 2} />
     <spotLight angle={0.15} decay={0} intensity={Math.PI} penumbra={1} position={[10, 10, 10]} />
@@ -10,3 +10,5 @@ export const FiberDemo = () => (
     <Box position={[1.2, 0, 0]} />
   </>
 )
+
+export default FiberDemo
