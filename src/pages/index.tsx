@@ -25,6 +25,9 @@ export const Index = () => {
           <Button justifyContent="flex-start" onClick={() => window.location.pathname = '/chamber/mmd'} variant="secondary">
             <Text>MMD</Text>
           </Button>
+          <Button justifyContent="flex-start" onClick={() => window.location.pathname = '/chamber/settings'} variant="ghost">
+            <Text>Settings</Text>
+          </Button>
         </Container>
         <H2>Demos</H2>
         <Container flexDirection="column" gap={4}>

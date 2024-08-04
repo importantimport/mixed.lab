@@ -11,6 +11,7 @@ import { Contexts } from './contexts'
 import { useTunnel } from './contexts/tunnel'
 import { Index } from './pages'
 import { MMDChamber } from './pages/chamber/mmd'
+import { SettingsChamber } from './pages/chamber/settings'
 import { FiberDemo } from './pages/demo/fiber'
 import { UikitDemo } from './pages/demo/uikit'
 import { XRDemo } from './pages/demo/xr'
@@ -41,6 +42,7 @@ export const Main = () => {
           </Fullscreen>
           <Switch>
             <Route component={MMDChamber} path="/chamber/mmd" />
+            <Route component={SettingsChamber} path="/chamber/settings" />
             <Route component={FiberDemo} path="/demo/fiber" />
             <Route component={UikitDemo} path="/demo/uikit" />
             <Route component={XRDemo} path="/demo/xr" />
